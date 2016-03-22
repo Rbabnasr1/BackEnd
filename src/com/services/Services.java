@@ -112,6 +112,10 @@ public class Services {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getFollowingList(@FormParam("id") int id_follower)
 			{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
 		ArrayList ar = new ArrayList <String> ();
 		ar = UserModel.getFollowingList(id_follower);
 		JSONObject json = new JSONObject();
@@ -121,6 +125,18 @@ public class Services {
 	  
 		}
 	
+<<<<<<< HEAD
+=======
+=======
+		ArrayList ar = UserModel.getFollowingList(id_follower);
+		JSONObject json = new JSONObject();
+		for(int i=0;i<ar.size();i++){
+		json.put("name ", ar.get(i));
+		System.out.println(ar.get(i));
+	
+		}
+>>>>>>> a254806186d3906f58cdd84db7547dcd802461b8
+>>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
 		return json.toJSONString();
 		
 			}
@@ -140,5 +156,12 @@ public class Services {
 		return json.toJSONString();
 	}
 
+<<<<<<< HEAD
 	
+=======
+<<<<<<< HEAD
+	
+=======
+>>>>>>> a254806186d3906f58cdd84db7547dcd802461b8
+>>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
 }

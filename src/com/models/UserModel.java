@@ -221,9 +221,21 @@ public class UserModel {
 	public static ArrayList getFollowingList(int id_follower)
 	{
 		try {
+<<<<<<< HEAD
 			ArrayList re = new ArrayList<String>();
 			Connection conn = DBConnection.getActiveConnection();
 			String sql = "select name from users where id in (select following_id from follow where follower_id =?)";
+=======
+<<<<<<< HEAD
+			ArrayList re = new ArrayList<String>();
+			Connection conn = DBConnection.getActiveConnection();
+			String sql = "select name from users where id in (select following_id from follow where follower_id =?)";
+=======
+			ArrayList re = new ArrayList<>();
+			Connection conn = DBConnection.getActiveConnection();
+			String sql = "select * from follow where follower_id= ?";
+>>>>>>> a254806186d3906f58cdd84db7547dcd802461b8
+>>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
 			
 			PreparedStatement stmt;
 			stmt = conn.prepareStatement(sql);
@@ -231,11 +243,34 @@ public class UserModel {
 			
 
 			ResultSet rs = stmt.executeQuery();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
 			UserModel user = new UserModel();
 			
 			while(rs.next()){
 			user.name=rs.getString("name");
 			re.add(user.name);
+<<<<<<< HEAD
+=======
+=======
+			if (rs.next()) {
+				UserModel user = new UserModel();
+				user.id= rs.getInt("following_id");
+				String sql1 ="select `name` from users where id = "
+				+user.id;
+				PreparedStatement stmt1;
+				stmt1 = conn.prepareStatement(sql1);
+				ResultSet rs1 = stmt1.executeQuery();
+				if(rs1.next())
+				{
+					UserModel user1 = new UserModel();
+					user1.name= rs.getString("name");
+					re.add(user1.name);
+				}
+>>>>>>> a254806186d3906f58cdd84db7547dcd802461b8
+>>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
 			}
 			return re;
 		} catch (SQLException e) {
