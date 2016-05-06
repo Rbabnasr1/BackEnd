@@ -13,21 +13,15 @@ public class DBConnection {
 		System.out.println(host);*/
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-<<<<<<< HEAD
-			connection = DriverManager
-					.getConnection("jdbc:mysql://127.3.236.2:3306/mmars?"
-						+ "user=adminnTgjMWM&password=ss5_AUqs9v5U&characterEncoding=utf8");
+
 		//	connection = DriverManager
-			//		.getConnection("jdbc:mysql://localhost:3306/fcisquare?"
-			//				+ "user=se2&password=root&characterEncoding=utf8");
-=======
-			//connection = DriverManager
-			//		.getConnection("jdbc:mysql://127.8.100.2:3306/se2firstapp?"
-			//				+ "user=adminYKFs38v&password=QG9RmdNVFgmc&characterEncoding=utf8");
-			connection = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/fcisquare?"
-							+ "user=se2&password=root&characterEncoding=utf8");
->>>>>>> 6d19e1c95faad686df63340ec669bde5b7391af1
+		//	.getConnection("jdbc:mysql://127.3.236.2:3306/fcisquare?"
+			//	+ "user=adminnTgjMWM&password=ss5_AUqs9v5U&characterEncoding=utf8");
+		connection = DriverManager
+		.getConnection("jdbc:mysql://localhost:3306/fcisquare?"
+				+ "user=se2&password=root&characterEncoding=utf8");
+		//connection = DriverManager
+		
 			return connection;
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

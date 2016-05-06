@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="409" started-at="2016-05-05T14:50:00Z" finished-at="2016-05-05T14:50:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="409" started-at="2016-05-05T14:50:00Z" finished-at="2016-05-05T14:50:01Z">
+      <class name="com.models.NewTest">
+        <test-method status="PASS" signature="addPlace(java.lang.String, java.lang.String)[pri:0, instance:com.models.NewTest@59fa1d9b]" name="addPlace" duration-ms="384" started-at="2016-05-05T16:50:00Z" data-provider="dp1" finished-at="2016-05-05T16:50:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[spain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[honey moon]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPlace -->
+      </class> <!-- com.models.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
